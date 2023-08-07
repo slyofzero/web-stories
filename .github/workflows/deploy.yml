@@ -5,12 +5,18 @@ on:
   pull_request:
     branches: [main, master]
 
+env:
+  HOST: ${{secrets.HOST}},
+  USERNAME: ${{secrets.USERNAME}},
+  KEY: ${{secrets.KEY}},
+  PORT: ${{secrets.PORT}},
+
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: executing remote ssh commands using password
+      - name: executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.HOST }}
