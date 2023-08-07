@@ -5,11 +5,11 @@ on:
   pull_request:
     branches: [main, master]
 
-env:
-  HOST: ${{secrets.HOST}},
-  USERNAME: ${{secrets.USERNAME}},
-  KEY: ${{secrets.KEY}},
-  PORT: ${{secrets.PORT}},
+# env:
+#   HOST: ${{secrets.HOST}},
+#   USERNAME: ${{secrets.USERNAME}},
+#   KEY: ${{secrets.KEY}},
+#   PORT: ${{secrets.PORT}},
 
 jobs:
   build:
